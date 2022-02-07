@@ -8,7 +8,9 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AuthorizationPage">
     <Grid>
+        
         <Grid Background="{StaticResource AdditionalBackground2}">
+            <TextBlock Text="Добро пожаловать! Ваша роль - Inspector. Авторизуйтесь ниже!" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20"></TextBlock>
             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal">
