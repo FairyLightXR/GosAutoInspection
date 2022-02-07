@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AddDrivers">
 
-    <Grid Background="{StaticResource BasicBackground2}">
+    <Grid Background="{StaticResource AdditionalBackground2}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
