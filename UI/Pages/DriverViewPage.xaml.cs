@@ -30,17 +30,35 @@ namespace GosAutoInspection.UI.Pages
 
         private void Addbtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Transition.MainFrame.Navigate (new AddDrivers(null));
+            DriversLV.ItemsSource = Transition.Context.Drivers.ToList();
         }
 
         private void Editbtn_Click(object sender, RoutedEventArgs e)
         {
-
+            var editDriver = DriversLV.SelectedItem as Drivers;
+            Transition.MainFrame.Navigate(new AddDrivers(editDriver as Drivers));
+            DriversLV.ItemsSource = Transition.Context.Drivers.ToList();
         }
 
         private void Deletebtn_Click(object sender, RoutedEventArgs e)
         {
-
+            var delDriver = DriversLV.SelectedItem as Drivers;
+            if (MessageBox.Show($"Вы хотите удалить продукт №{delDriver.GUID} ?", "Удаление водителя", MessageBoxButton.YesNo,
+                MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    Transition.Context.Drivers.Remove(delDriver);
+                    Transition.Context.SaveChanges();
+                    MessageBox.Show("Данные удалены");
+                    DriversLV.ItemsSource = Transition.Context.Drivers.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

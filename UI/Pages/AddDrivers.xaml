@@ -8,7 +8,52 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AddDrivers">
 
-    <Grid>
-        
+    <Grid Background="{StaticResource BasicBackground2}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <WrapPanel>
+                <TextBlock Text="Фамилия: " Width="150" Height="25" Padding="5" Margin="5"></TextBlock>
+                <TextBox Text="{Binding Surname}" Width="150" Height="25"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Имя: " Width="150" Height="25" Padding="5" Margin="5"></TextBlock>
+                <TextBox Text="{Binding Name}" Width="150" Height="25"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Отчество: " Width="150" Height="25"  Padding="5" Margin="5"></TextBlock>
+                <TextBox Text="{Binding ThirdName}" Width="150" Height="25"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Паспортные данные: " Width="150" Height="25"  Padding="5" Margin="5"></TextBlock>
+                <TextBox Text="{Binding PassNum}" Width="150" Height="25"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Адрес проживания: " Width="150" Height="25" Padding="5" Margin="5"></TextBlock>
+                <TextBox Text="{Binding LifeAdress}" Width="150" Height="25"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Адрес регистрации: " Width="150" Height="25" Padding="5" Margin="5"></TextBlock>
+                <TextBox Text="{Binding RegAdress}" Width="150" Height="25"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Компания: " Width="150" Height="25" Padding="5" Margin="5"></TextBlock>
+                <TextBox Text="{Binding Company}" Width="150" Height="25"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Номер телефона: " Width="150" Height="25" Padding="5" Margin="5"></TextBlock>
+                <TextBox Text="{Binding PhoneNum}" Width="150" Height="25"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Электронная почта: " Width="150" Height="25" Padding="5" Margin="5"></TextBlock>
+                <TextBox Text="{Binding Email}" Width="150" Height="25"></TextBox>
+            </WrapPanel>
+        </StackPanel>
+        <Grid Grid.Row="1" Background="{StaticResource BasicBackground}">
+            <Button Name="Savebtn" Click="Savebtn_Click" Content="Сохранить" HorizontalAlignment="Left" VerticalAlignment="Center"></Button>
+            <Button Name="Cancelbtn" Click="Cancelbtn_Click" Content="Отмена" HorizontalAlignment="Right" VerticalAlignment="Center"></Button>
+        </Grid>
     </Grid>
 </Page>
